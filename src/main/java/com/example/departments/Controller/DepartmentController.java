@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
-//    @Value("${welcome}")
-//    String AA;
+    @Value("${welcome}")
+    String AA;
 
     @PostMapping
     public Department saveDeparment(@RequestBody Department department){
@@ -32,6 +32,6 @@ public class DepartmentController {
 
     @GetMapping
     public String helloWorld(){
-        return "Hello Vinh nè";
+        return AA;
     }
 }
